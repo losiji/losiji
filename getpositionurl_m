@@ -1,0 +1,17 @@
+function getpositionurl_m($position)
+{
+$aa=$position;
+$posiurlarr=explode("</a> >",$aa);
+$posiurlnum=count($posiurlarr)-1;
+$reurlarr=array();
+for($i=0;$i<$posiurlnum;$i++)
+{
+     $ccc=explode("'",$posiurlarr[$i]);
+     $ccc[1]=geturl_m($ccc[1]);          
+     $reurlarr[]=implode("'",$ccc)."</a>";     
+}
+$reurl=implode(" > ",$reurlarr);
+return $reurl;
+}
+
+https://hsivf.com
